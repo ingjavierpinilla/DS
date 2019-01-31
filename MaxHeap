@@ -41,10 +41,10 @@ public class MaxHeap {
     }
 
     public void buildHeap(int[] a) {
-        this.array = a;
-        setSize(a.length - 1);
+        setArray(a);
+        setSize(a.length-1);
 
-        for (int i = getSize() / 2; i > 1; i--) {
+        for (int i = (getSize()-1) / 2; i > 1; i--) {
             siftDown(i);
         }
 
@@ -106,15 +106,18 @@ public class MaxHeap {
         return result;
     }
 
-    public void sort(int[] array) {
-        int n = getSize();
-        PriorityQueue<Integer> pQueue = new PriorityQueue<Integer>(n);
-        for (int i = 1; i < n; i++) {
-            pQueue.add(i);
+    public void sort(int[] a) {
+        PriorityQueue<Integer> pQ= new PriorityQueue<Integer>(a.length);
+
+        for (int i = 0; i < a.length; i++) {
+            pQ.add(a[i]);
         }
-        for (int i = n; i > 1; i--) {
-            array[i] = extractMax();
+        setArray(a);
+        for (int i = 0; i < array.length; i++) {
+            
+            this.array[i]=pQ.poll();
         }
+     
 
     }
 
