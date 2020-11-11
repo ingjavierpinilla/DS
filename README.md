@@ -1,3 +1,1 @@
-# DS
-data structure
-https://and-arevalo.github.io/class/ds/index
+code snippets from different data structures and their methods implemented in java
