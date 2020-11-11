@@ -1,1 +1,1 @@
-code snippets from different data structures and their methods implemented in java
+Code snippets from different data structures and their methods implemented in java
